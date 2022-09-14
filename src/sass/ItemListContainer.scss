@@ -1,0 +1,13 @@
+h1{
+    margin: 50px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.productos{
+    position: relative;
+    top: 140px;
+}
