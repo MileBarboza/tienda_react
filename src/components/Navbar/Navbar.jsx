@@ -11,7 +11,7 @@ function Navbar() {
             <div></div>
             <img src="/assets/logo.png" alt="Logo" className='logo'/>
             <div className='icons'>
-                <div>       
+                <div className='contenedor-buscador'>       
                   <form className="box">
                       <input type="text" placeholder="Buscar..."  />
                       <BsSearch className="icons__search"/>
@@ -19,13 +19,13 @@ function Navbar() {
                 </div> 
                 <div> <BiUser className="icons__user"/> </div>
                 <div> <IoMdHeartEmpty className="icons__heart"/> </div>
-                <div> <GrCart className="icons__cart"/> <span className='item__total'>0</span></div>
+                <div className='item'> <GrCart className="icons__cart"/> <span className='item__total item__total-fondo'>2</span></div>
             </div>
           </div>
           <nav className="bar">
               <ul className="menu" >
                   <li  className="link">INICIO</li>
-                  <li className="link container-submenu">PRODUCTOS
+                  <li className="link container-submenu">PRODUCTOS 
                     <ul className="submenu">	
                       <li className="sub-link">Abrigos</li>
                       <li className="sub-link">Pantalones</li>

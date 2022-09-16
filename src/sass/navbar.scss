@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: row;
     gap: 15px;
+    margin-right: 15px;
       &__cart{
         font-size: 25px;
         position: relative;
@@ -47,7 +48,18 @@
         }
   }
   .item__total{
-    font-size: 18px;
+      font-size: 14px;
+        &-fondo{
+          position: absolute;
+          z-index: 1;
+          background-color: rgb(222, 134, 134);
+          width: 20px;
+          height: 20px;
+          color: #fff;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.143);
+          padding: 3px;
+          border-radius: 50%;
+        }
   }
   .bar {
     display: flex;
@@ -86,6 +98,7 @@
     left: 20px;
     width: 130px;
     z-index: 1000;
+    visibility: hidden;
     opacity: 0;
     line-height: 2.5rem;
     background-color: #fff;
@@ -97,9 +110,8 @@
   }
   /* _______________________     BUSCADOR     */
   .contenedor-buscador{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    right: 10.9375rem;
   }
   .box{
     cursor: pointer;

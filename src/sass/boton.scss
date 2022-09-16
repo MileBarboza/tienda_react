@@ -3,8 +3,18 @@
     background-color: rgb(253, 189, 157);
     border: none;
     padding: 10px 20px;
-    margin-bottom: 20px;
+    margin: 10px;
         &:hover{
             background-color: rgb(255, 175, 135);
         }
 } 
+
+.btnCount{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px rgb(8, 218, 255) solid;
+    border: 1px rgb(255, 180, 180) solid; 
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+}

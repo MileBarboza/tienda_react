@@ -1,14 +1,14 @@
 import '../../sass/card.scss'
-
 import Boton from "../boton/Boton"
-                            /* p ó */
+import ItemCount from '../itemCount/ItemCount'
+                            
 export default function card(props) {
    let {price, title, img, detail} = props
 
   return (
     <section className='card'>
-        <div  className='card__img'>
-            <img src={img}  alt="producto"/>
+        <div  >
+            <img src={img} className='card__img' alt="producto"/>
         </div>
 
         <div className='card__detail'>
@@ -16,6 +16,8 @@ export default function card(props) {
             <p>{detail}</p>
             <h4>${price}</h4>
         </div>
+
+        <ItemCount stock={3}/>   
         
         <Boton text="ver más" className="btn"ver mas/>
     </section>
