@@ -1,41 +1,26 @@
-import Card from "./Card"
-import '../../sass/ItemListContainer.scss'
+import React, {useState, useEffect} from 'react'
+import getItems from '../../database/mockAPI'
+import ItemList from './ItemList'
+import './itemListContainer.scss'
+
 
 function ItemListContainer({greeting}) {
+
+    let [data, setData] = useState([]);
+
+    useEffect(
+      () => {
+        getItems().then ((respuestaDatos) => {
+          setData(respuestaDatos) 
+        });
+      }, []);
+
+
   return (
     <div className="productos">
         <h1>{greeting}</h1> 
         <div className="container">
-            <Card 
-                title="lorem is lapsumdesd" 
-                price={19600} 
-                img="https://place-hold.it/250x300" alt="Producto"/> 
-
-            <Card 
-                title="lorem is lapsumdesd" 
-                price={6309} 
-                img="https://place-hold.it/250x300" alt="Producto"/> 
-
-            <Card 
-                title="lorem is lapsumdesd"
-                price={3750.066} 
-                img="https://place-hold.it/250x300" alt="Producto"/> 
-
-            <Card 
-                title="lorem is lapsumdesd" 
-                price={19600} 
-                img="https://place-hold.it/250x300" alt="Producto"/>
-
-            <Card 
-                title="lorem is lapsumdesd" 
-                price={6309} 
-                img="https://place-hold.it/250x300" alt="Producto"/> 
-
-            <Card 
-                title="lorem is lapsumdesd"
-                price={3750.066} 
-                img="https://place-hold.it/250x300" alt="Producto"/> 
-
+            <ItemList  data={data}/>
         </div>
     </div>
   )

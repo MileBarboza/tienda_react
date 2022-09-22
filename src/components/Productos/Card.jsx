@@ -1,25 +1,31 @@
-import '../../sass/card.scss'
+import './card.scss'
+import { IoMdHeartEmpty } from 'react-icons/io'
 import Boton from "../boton/Boton"
 import ItemCount from '../itemCount/ItemCount'
                             
 export default function card(props) {
-   let {price, title, img, detail} = props
+
+   let {price, title, img, stock} = props
+
 
   return (
-    <section className='card'>
-        <div  >
-            <img src={img} className='card__img' alt="producto"/>
-        </div>
+      <section className='card'>
+          <div  >
+              <img src={img} className='card__img' alt="producto Clothing"/>
+          </div>
+          <div >
+            <div className='card__detail'>
+              <div>
+                <h3 className='card__titulo'>{title}</h3>
+                <p className='card__precio'>${price}</p>
+              </div>
+                <button className="card__favorito"><IoMdHeartEmpty/></button>
+            </div>
+          </div>
 
-        <div className='card__detail'>
-            <h3>{title}</h3>
-            <p>{detail}</p>
-            <h4>${price}</h4>
-        </div>
+          <ItemCount initial={1} stock={stock}/>   
 
-        <ItemCount stock={3}/>   
-        
-        <Boton text="ver más" className="btn"ver mas/>
-    </section>
+          <Boton text="ver más" className="card__btn"ver mas/>
+      </section>
   )
 }

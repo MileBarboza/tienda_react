@@ -1,4 +1,4 @@
-import './sass/app.scss';
+import './app.scss';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer'
 import ItemListContainer from './components/Productos/ItemListContainer';

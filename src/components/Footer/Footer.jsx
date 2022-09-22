@@ -1,4 +1,4 @@
-import '../../sass/footer.scss'
+import './footer.scss'
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";

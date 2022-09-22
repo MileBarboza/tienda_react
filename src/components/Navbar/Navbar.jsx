@@ -1,4 +1,4 @@
-import '../../sass/navbar.scss'
+import './navbar.scss'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import { GrCart } from 'react-icons/gr'
 import { BiUser } from "react-icons/bi";
@@ -27,10 +27,10 @@ function Navbar() {
                   <li  className="link">INICIO</li>
                   <li className="link container-submenu">PRODUCTOS 
                     <ul className="submenu">	
-                      <li className="sub-link">Abrigos</li>
-                      <li className="sub-link">Pantalones</li>
-                      <li className="sub-link">Remeras</li>
-                      <li className="sub-link">Sweaters</li>
+                      <li className="sub-link">Abrigo</li>
+                      <li className="sub-link">Pantalón</li>
+                      <li className="sub-link">Remera</li>
+                      <li className="sub-link">Sweater</li>
                     </ul>
                   </li>
                   <li className="link">CONTACTO</li>

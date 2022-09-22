@@ -1,4 +1,4 @@
-import '../../sass/boton.scss'
+import './boton.scss'
 
 function Boton(props) {
   return (
