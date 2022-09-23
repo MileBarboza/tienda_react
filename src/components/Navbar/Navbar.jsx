@@ -27,9 +27,9 @@ function Navbar() {
                   <li  className="link">INICIO</li>
                   <li className="link container-submenu">PRODUCTOS 
                     <ul className="submenu">	
-                      <li className="sub-link">Abrigo</li>
                       <li className="sub-link">Pantalón</li>
                       <li className="sub-link">Remera</li>
+                      <li className="sub-link">Abrigo</li>
                       <li className="sub-link">Sweater</li>
                     </ul>
                   </li>

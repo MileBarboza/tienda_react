@@ -9,10 +9,10 @@ export default function Footer() {
             <div className="footer">
                 <div >
                     <h5>CATEGORÍAS</h5>
-                      <li>Abrigos</li>
-                      <li>Pantalones</li>
-                      <li>Remeras</li>
-                      <li>Sweaters</li>
+                      <li>Abrigo</li>
+                      <li>Pantalon</li>
+                      <li>Remera</li>
+                      <li>Sweater</li>
                 </div>
                 <div >
                     <h5>AYUDA</h5>

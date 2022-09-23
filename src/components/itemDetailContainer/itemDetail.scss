@@ -1,0 +1,78 @@
+.itemD{
+    height: 100vh;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        &__txt {
+            text-align: start;
+            flex: 1 2 50rem;
+        }
+        &__titulo {
+            font-size: 2.5rem;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+        }
+        &__precio{
+            font-size: 2.5rem;
+            margin: 15px 0 25px;
+            font-weight: bold;
+        }
+        &__categoria{
+            padding: 0;
+            margin: 0;
+            color: rgb(116, 115, 115);
+        }
+        &__fav{
+            border: none;
+            background: none;
+            font-size: 30px;
+            position: relative;
+            top: 8px;
+            margin-left: 8px;
+        }
+        &__comprar{
+            background-color: #000;
+            color: #fff;
+            border-radius: 7px;
+            padding: 7px 10px;
+            font-size: 1em;
+            margin: 1.5rem 0;
+            border: none;
+            &:hover{
+                background-color: rgb(54, 54, 54);
+            }
+        }
+        &__pago{
+            font-size: 10px;
+            color: rgb(104, 104, 104);
+            line-height: 25px;
+            &-icon{
+                margin-right: 5px ;
+                font-size: 14px;
+                position: relative;
+                top: 2px;
+                &--s{
+                    margin-right: 5px ;
+                    font-size: 12px;
+                }
+            }
+        }
+        &__img {
+            flex: 1 1 50rem;
+            display: flex;
+            justify-content: right;
+            padding-right: 90px;
+            &-Product {
+                width: 400px;
+                height: 500px;
+            }   
+        }
+        &__detalle{
+            display: flex;
+            flex-direction: row;
+            margin: 10px 0;
+        }
+}
+

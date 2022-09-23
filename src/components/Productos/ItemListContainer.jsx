@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import getItems from '../../database/mockAPI'
+import ItemDatailContainer from '../itemDetailContainer/ItemDetailContainer'
 import ItemList from './ItemList'
 import './itemListContainer.scss'
 
@@ -22,6 +23,7 @@ function ItemListContainer({greeting}) {
         <div className="container">
             <ItemList  data={data}/>
         </div>
+      <ItemDatailContainer/>
     </div>
   )
 }

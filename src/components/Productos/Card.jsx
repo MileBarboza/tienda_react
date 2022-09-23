@@ -1,11 +1,11 @@
 import './card.scss'
 import { IoMdHeartEmpty } from 'react-icons/io'
-import Boton from "../boton/Boton"
-import ItemCount from '../itemCount/ItemCount'
+// import Boton from "../boton/Boton"
+// import ItemCount from '../itemCount/ItemCount'
                             
 export default function card(props) {
 
-   let {price, title, img, stock} = props
+   let {price, title, img} = props
 
 
   return (
@@ -23,9 +23,9 @@ export default function card(props) {
             </div>
           </div>
 
-          <ItemCount initial={1} stock={stock}/>   
+          {/* <ItemCount initial={1} stock={stock}/>    */}
 
-          <Boton text="ver más" className="card__btn"ver mas/>
+          {/* <Boton text="ver más" className="card__btn"ver mas/> */}
       </section>
   )
 }

@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        title: "Sweater con puntila" ,
+        title: "Sweater con puntilla" ,
         price: 3050 ,
         img:"/assets/1.jpg",
         stock: 3,
@@ -33,7 +33,7 @@ const data = [
     },
     {
         id: 5,
-        title: "Campera Chaqueta" ,
+        title: "Chaqueta Gabardina de doble botonadura" ,
         price: 7590 ,
         img:"/assets/5.jpg",
         stock: 3,
@@ -89,6 +89,13 @@ const data = [
     })
   }
 
+  export  function getSingleItems(){
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data[6])
+        }, 1500);
+    })
+  }
 
 
   
