@@ -3,13 +3,14 @@ import { IoMdHeartEmpty } from 'react-icons/io'
 import { GrCart } from 'react-icons/gr'
 import { BiUser } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
+import { Link } from "react-router-dom"
 
 function Navbar() {
     return (
       <header className="navbar">
           <div  className='nav'>
             <div></div>
-            <img src="/assets/logo.png" alt="Logo" className='logo'/>
+            <Link to='/'><img src="/assets/logo.png" alt="Logo" className='logo'/></Link>
             <div className='icons'>
                 <div className='contenedor-buscador'>       
                   <form className="box">
@@ -17,23 +18,25 @@ function Navbar() {
                       <BsSearch className="icons__search"/>
                   </form>
                 </div> 
-                <div> <BiUser className="icons__user"/> </div>
-                <div> <IoMdHeartEmpty className="icons__heart"/> </div>
-                <div className='item'> <GrCart className="icons__cart"/> <span className='item__total item__total-fondo'>2</span></div>
+
+                <Link to='/login'><button className="icons__user"> <BiUser /></button></Link>
+                <Link to='/favorito'><button className="icons__heart"> <IoMdHeartEmpty /> </button></Link>
+                <Link to='/carrito'><button className="icons__cart"> <GrCart /> <span className='item__total item__total-fondo'>0</span></button></Link>
             </div>
           </div>
+
           <nav className="bar">
               <ul className="menu" >
-                  <li  className="link">INICIO</li>
-                  <li className="link container-submenu">PRODUCTOS 
-                    <ul className="submenu">	
-                      <li className="sub-link">Pantalón</li>
-                      <li className="sub-link">Remera</li>
-                      <li className="sub-link">Abrigo</li>
-                      <li className="sub-link">Sweater</li>
-                    </ul>
-                  </li>
-                  <li className="link">CONTACTO</li>
+                  <li className="link"><Link to='/'>INICIO</Link></li>
+                  <li className="link container-submenu"><Link to='/'>PRODUCTOS 
+                    <ol className="submenu">	
+                      <li className="sub-link"><Link to='/categoria/Abrigo'>Abrigo</Link></li>
+                      <li className="sub-link"><Link to='/categoria/Pantalón'>Pantalón</Link></li>
+                      <li className="sub-link"><Link to='/categoria/Remera'>Remera</Link></li>
+                      <li className="sub-link"><Link to='/categoria/Sweater'>Sweater</Link></li>
+                    </ol>
+                    </Link></li>
+                  <li className="link"><Link to='/contacto'>CONTACTO</Link></li>
               </ul>
           </nav> 
       </header>

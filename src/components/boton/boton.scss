@@ -4,14 +4,76 @@
     border: none;
     padding: 10px 20px;
     margin: 10px;
+    &__Count{
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px rgb(255, 180, 180) solid; 
+        margin: 5px;
+        padding: 5px;
+        font-size: 10px;
+    }
+    &__fav{
+        border: none;
+        background: none;
+        font-size: 30px;
+        position: relative;
+        top: 10px;
+        margin-left: 8px;
+        cursor: pointer;
+        &:active {
+            transition: all 0.2s;
+            transform: scale(1.2);
+        }
+    }
+    &__comprar{
+        background-color: #000;
+        color: #fff;
+        border-radius: 7px;
+        padding: 7px 10px;
+        font-size: 1em;
+        margin: 1.5rem 0;
+        border: none;
+        cursor: pointer;
+        &:active {
+            transition: all 0.2s;
+            background-color: rgb(234, 179, 154);
+            color: #000;
+        }
+    }
+    &__talle {
+        border-radius: 7px;
+        border: 1px solid rgb(151, 151, 151);
+        padding: 8px;
+        margin: 5px;
+        cursor: pointer;
+        width:45px;
+        &:active {
+            transition: all 0.2s;
+            background-color: rgb(218, 216, 207);
+        }
+    }
+    &__color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid rgb(221, 221, 221);
+        margin: 5px;
+        cursor: pointer;
+        &:active {
+            transition: all 0.3s;
+            border: 1px solid #000;
+        }
+        &-rosa{
+            background-color: rgb(255, 170, 159);
+        }
+        &-blanco{
+            background-color: rgb(255, 253, 239);
+        }
+        &-gris{
+            background-color: rgb(165, 165, 165);
+        }
+        &-negro{
+            background-color: rgb(32, 32, 32);
+        }
+    }
 } 
-
-.btnCount{
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px rgb(8, 218, 255) solid;
-    border: 1px rgb(255, 180, 180) solid; 
-    margin: 5px;
-    padding: 5px;
-    font-size: 10px;
-}

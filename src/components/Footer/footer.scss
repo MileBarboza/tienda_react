@@ -1,7 +1,6 @@
 footer {
     background: rgb(194, 191, 191);
     width: 100%;
-    color: #fff;
     color: #000;
     margin-top: 40px;
   }
@@ -14,7 +13,6 @@ footer {
     padding: 20px 0 25px;
     line-height: 25px;
       & li:hover {
-        color: #000;
         color: #fff;
       }
       &__contacto{
@@ -39,6 +37,8 @@ footer {
     font-size: 13px;
     position: relative;
     top: 1px;
+    color: #fff;
+    left:1px;
   }
   
   @media (max-width: 768px) {

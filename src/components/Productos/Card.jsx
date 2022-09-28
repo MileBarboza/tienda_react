@@ -1,31 +1,25 @@
 import './card.scss'
 import { IoMdHeartEmpty } from 'react-icons/io'
-// import Boton from "../boton/Boton"
-// import ItemCount from '../itemCount/ItemCount'
+import { Link } from "react-router-dom";
                             
 export default function card(props) {
 
-   let {price, title, img} = props
-
+   let {price, title, img, id} = props
 
   return (
-      <section className='card'>
-          <div  >
+    <section className='card'>
+          <Link to={`/productos/${id}-${title}`}><div  >
               <img src={img} className='card__img' alt="producto Clothing"/>
-          </div>
+          </div></Link>
           <div >
             <div className='card__detail'>
               <div>
                 <h3 className='card__titulo'>{title}</h3>
                 <p className='card__precio'>${price}</p>
               </div>
-                <button className="card__favorito"><IoMdHeartEmpty/></button>
+                <button className="card__favorito btn__fav"><IoMdHeartEmpty/></button>
             </div>
           </div>
-
-          {/* <ItemCount initial={1} stock={stock}/>    */}
-
-          {/* <Boton text="ver más" className="card__btn"ver mas/> */}
       </section>
   )
 }

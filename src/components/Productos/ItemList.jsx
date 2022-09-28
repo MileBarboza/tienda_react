@@ -9,12 +9,13 @@ function ItemList(props) {
               console.log(item);
               return (
                 <Card 
-                  key={item.id}      
+                  key={item.id}  
+                  id={item.id}   
                   price={item.price}
                   title={item.title}
                   img={item.img}
                   stock={item.stock}
-                  catagory={item.catagory}
+                  category={item.category}
                 />
               )
             })

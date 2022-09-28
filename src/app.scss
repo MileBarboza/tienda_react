@@ -1,9 +1,22 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.App {
+  text-align: center;
+}
+.jsx{
+    margin-top: 150px;
+}
+.noProduc {
+  line-height: 30px;
+  &__txt{
+    font-size: 30px;
   }
-  .App {
-    text-align: center;
+  img{
+    width: 250px;
   }
+}
