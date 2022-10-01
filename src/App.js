@@ -3,6 +3,8 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer'
 import ItemListContainer from './components/Productos/ItemListContainer';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Carrito from './components/carrito/Carrito';
 import Favorito from './components/favorito/Favorito';
@@ -34,7 +36,9 @@ function App() {
             <Route path='/terminos-y-condiciones' element={ <TérminosYCondiciones/> }/>
             <Route path='/politicas-de-privacidad' element={ <PolíticasDePrivacidad/> }/>                      
         </Routes>
+
       <Footer />
+        <ToastContainer/>
     </BrowserRouter>
   );
 }

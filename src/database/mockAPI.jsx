@@ -78,7 +78,7 @@ const data = [
         img:"/assets/Remera calada.jpg",
         stock: 4,
         category: "Remera"
-    }              
+    } 
   ]
 
   export default function getItems(){

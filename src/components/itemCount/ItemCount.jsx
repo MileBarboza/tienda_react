@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { IoMdHeartEmpty } from 'react-icons/io'
+import Boton from "../boton/Boton"
 
-function ItemCount({initial, stock})  {
+function ItemCount({initial, stock, onAddToCart})  {
 const [count, setCount] = useState( initial)
 
 // useEffect(     
@@ -19,11 +20,11 @@ function restar(){
   return (
     <div>
         <p>Stock: {stock - count}</p> 
-        <button disabled={count <= 0} className='btn__Count' onClick={restar}>-</button>
+        <button onClick={restar} disabled={count <= 0} className='btn__Count'>-</button>
         <span>{count}</span>
-        <button disabled={ count >= stock } className='btn__Count' onClick={agregar} >+</button>
+        <button onClick={agregar} disabled={ count >= stock } className='btn__Count'>+</button>
         <div>
-            <button className="btn__comprar" disabled={count <=0} >Agregar al Carrito</button>
+            <Boton onClick={() => onAddToCart(count)}   disabled={count <=0} >Agregar al Carrito </Boton>
             <button className="btn__fav"><IoMdHeartEmpty/></button>
         </div>
     </div>

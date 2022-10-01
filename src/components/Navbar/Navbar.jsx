@@ -14,7 +14,7 @@ function Navbar() {
             <div className='icons'>
                 <div className='contenedor-buscador'>       
                   <form className="box">
-                      <input type="text" placeholder="Buscar..."  />
+                      <input type="text" placeholder="Buscar..." />
                       <BsSearch className="icons__search"/>
                   </form>
                 </div> 

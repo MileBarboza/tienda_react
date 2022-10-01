@@ -2,7 +2,7 @@ import React from 'react'
 
 function PolíticasDePrivacidad() {
   return (
-    <div className='jsx'>
+    <div className='jsx App'>
        <h1> POLÍTICAS DE PRIVACIDAD</h1>
     </div>
   )
