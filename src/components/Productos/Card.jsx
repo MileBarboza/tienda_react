@@ -8,7 +8,7 @@ export default function card(props) {
 
   return (
     <section className='card'>
-          <Link to={`/productos/${id}-${title}`}><div  >
+          <Link to={`/productos/${id}-${title}`}><div>
               <img src={img} className='card__img' alt="producto Clothing"/>
           </div></Link>
           <div >

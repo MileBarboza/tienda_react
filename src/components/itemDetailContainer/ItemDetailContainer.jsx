@@ -3,11 +3,11 @@ import {getSingleItems} from '../../database/mockAPI';
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom";
 
+
 function ItemDetailContainer() {
 
 let [data, setData] = useState({});
 
-console.log(useParams());
 const { id } = useParams();
 
 useEffect (() => {

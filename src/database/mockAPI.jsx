@@ -89,13 +89,12 @@ const data = [
     })
   }
 
-  export function getItemsBycategory(cat) {   // para las Categorias
+  export function getItemsBycategory(cat) {   
     return new Promise((resolve, reject) => {
       let itemFind = data.filter((item) => {
         return item.category === cat;
       });
       setTimeout( () => {
-        console.log("Encontramos:",itemFind)
         if (itemFind) resolve(itemFind);
         else reject(new Error("item no encontrado"));
       }, 500)

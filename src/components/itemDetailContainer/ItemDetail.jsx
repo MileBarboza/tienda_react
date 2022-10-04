@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useContext, useState} from 'react'
 import ItemCount from '../itemCount/ItemCount'
 import { BsBoxSeam } from 'react-icons/bs'
 import { MdOutlineLocalShipping } from 'react-icons/md'
@@ -7,26 +7,28 @@ import './itemDetail.scss'
 import { Link } from "react-router-dom";
 import Boton from "../boton/Boton"
 import { toast } from "react-toastify";
-
+import { CartContext } from "../../context/CartContext"
 
 function ItemDetail({data}) {
 
-   let {price, title, img, stock, category} = data
+  let {price, title, img, stock, category} = data
 
-   const [estadoCart, setEstadoCart] = useState(true)
+  const [estadoCart, setEstadoCart] = useState(true)
+  
+  const {addItem} = useContext(CartContext)
 
-   function handleAddToCart(count){
-    toast(`Agregaste ${count} Productos al Carrito! `,{autoClose: 2000,theme: "colored", hideProgressBar: true, style: {
-      background: "linear-gradient(19deg, #a8fadf 0%, #bcafe7 100%)",
-      borderRadius:"7px",
-      fontWeight:"600",
-      top: "50px",
-      color:"#fff",
-      textShadow:"1px 1px 2px rgba(0,0,0,0.386)"
-    }})
-    setEstadoCart(false)
-   }
-
+  function handleAddToCart(count){
+      addItem(data,count)
+      toast(`Agregaste ${count} ${title} al Carrito! `,{autoClose: 2000,theme: "colored", hideProgressBar: true, style: {
+        background: "linear-gradient(19deg, #a8fadf 0%, #bcafe7 100%)",
+        borderRadius:"7px",
+        fontWeight:"600",
+        top: "50px",
+        color:"#fff",
+        textShadow:"1px 1px 2px rgba(0,0,0,0.386)"
+  }})
+  setEstadoCart(false)
+}
 
   return (
       <section className="itemD">  
@@ -56,7 +58,7 @@ function ItemDetail({data}) {
                   <button className='btn__talle'>XL</button>
               </div>
 
-            { estadoCart ?  <ItemCount  onAddToCart={handleAddToCart} initial={0} stock={stock}/>  :   <Link to='/carrito'><Boton>Finalizar Compra</Boton></Link> }
+            { estadoCart ?  <ItemCount  onAddToCart={handleAddToCart} initial={0} stock={stock}/>  :  <Link to='/carrito'><Boton>Finalizar Compra</Boton></Link> }
 
               <div className='itemD__pago'>
                  <p><MdOutlineLocalShipping  className='itemD__pago-icon'/> ENVÍOS A TODO EL PAÍS</p>

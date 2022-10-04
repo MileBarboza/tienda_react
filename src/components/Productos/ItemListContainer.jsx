@@ -11,7 +11,6 @@ function ItemListContainer({greeting}) {
 const [loading, setLoading] = useState(false)
 
 const { cat } = useParams()
-console.log(cat);
  
 useEffect(() => {
   setLoading(true)
@@ -28,7 +27,6 @@ useEffect(() => {
         getItemsBycategory(cat).then((respuestaDatos) => setData(respuestaDatos));
       }
     }, [cat]);
-
 
   return (
     <>

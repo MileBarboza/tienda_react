@@ -10,12 +10,12 @@ export default function Footer() {
             <div className="footer ">
                 <div >
                     <h5>CATEGORÍA</h5>
-                    <ol>	
+                    <ul>	
                       <li><Link to='/categoria/Abrigo'>Abrigo</Link></li>
                       <li><Link to='/categoria/Pantalón'>Pantalón</Link></li>
                       <li><Link to='/categoria/Remera'>Remera</Link></li>
                       <li><Link to='/categoria/Sweater'>Sweater</Link></li>
-                    </ol>
+                    </ul>
                 </div>
                 <div >
                     <h5>AYUDA</h5>
