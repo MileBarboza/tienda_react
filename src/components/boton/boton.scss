@@ -24,13 +24,19 @@
         background: none;
         font-size: 30px;
         position: relative;
-        top: 10px;
+        top: -55px;
+        left: 150px;
         margin-left: 8px;
         cursor: pointer;
         &:active {
             transition: all 0.2s;
             transform: scale(1.2);
         }
+    }
+    &__eliminar {
+        border: none;
+        background: none;
+        font-size: 18px;
     }
     &__talle {
         border-radius: 7px;
@@ -66,5 +72,12 @@
         &-negro{
             background-color: rgb(32, 32, 32);
         }
+        &-verde{
+            background-color: rgb(153, 204, 81);
+        }
+        &-celeste{
+            background-color: rgb(163, 227, 246);
+        }
+     
     }
 } 

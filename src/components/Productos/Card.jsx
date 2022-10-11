@@ -9,7 +9,7 @@ export default function card(props) {
   return (
     <section className='card'>
           <Link to={`/productos/${id}-${title}`}><div>
-              <img src={img} className='card__img' alt="producto Clothing"/>
+              <img src={img} className='card__img' alt={`${title}`}/>
           </div></Link>
           <div >
             <div className='card__detail'>
@@ -17,7 +17,7 @@ export default function card(props) {
                 <h3 className='card__titulo'>{title}</h3>
                 <p className='card__precio'>${price}</p>
               </div>
-                <button className="card__favorito btn__fav"><IoMdHeartEmpty/></button>
+                <button className="card__favorito "><IoMdHeartEmpty/></button>
             </div>
           </div>
       </section>

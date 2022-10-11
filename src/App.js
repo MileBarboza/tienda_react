@@ -25,10 +25,12 @@ function App() {
               <Route path='/productos/:id' element={ <ItemDetailContainer/> }/> 
               <Route path='/contacto' element={ <Contacto/> }/> 
               <Route path='/categoria/:cat' element={ <ItemListContainer/> }/>
+              <Route path='/talle/:talla' element={ <ItemListContainer/> }/>
+              <Route path='/color/:colors' element={ <ItemListContainer/> }/>
               <Route path='*' element={  
                 <div className='App jsx noProduc'>
                   <img src="https://img.freepik.com/vector-premium/ilustracion-maniqui-aislado-sobre-fondo-blanco-maniqui-ilustracion-dibujo-vectorial_231873-7179.jpg?w=360" alt="No hay Servicio"/>
-                    <p className='noProduc__txt'> No coincide con ningún Producto.</p>
+                    <p className='noProduc__txt'> No coincide con ningún Producto</p>
                 </div>
               }/> 
               <Route path='/carrito' element={ <Carrito/> }/>

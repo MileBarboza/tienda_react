@@ -55,20 +55,21 @@
         
         }
   }
-  .item__total{
-      font-size: 14px;
-      line-height: 11px;
-        &-fondo{
-          position: absolute;
-          z-index: 1;
-          background-color: rgb(222, 134, 134);
-          width: 17px;
-          height: 16px;
-          color: #fff;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.143);
-          padding: 3px;
-          border-radius: 50%;
-        }
+  .item__total {
+    font-size: 12px;
+    line-height: 11px;
+    position: relative;
+    top: -32px;
+    right: -14px;
+    background-color: rgb(222, 134, 134);
+    width: 19px;
+    height: 19px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.143);
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
   .bar {
     display: flex;

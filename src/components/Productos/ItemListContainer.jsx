@@ -1,44 +1,48 @@
 import React, {useState, useEffect} from 'react'
 import ItemList from './ItemList'
 import './itemListContainer.scss'
-import getItems, { getItemsBycategory } from '../../database/mockAPI'
+import getItems, { getItemsByCategory} from '../../database/mockAPI'
 import { useParams } from "react-router-dom";
-import CircularProgress from '@mui/material/CircularProgress';
+import { DotSpinner } from '@uiball/loaders'
+import Filtro from '../filtro/Filtro';
 
 function ItemListContainer({greeting}) {
 
-    let [data, setData] = useState([]);
-const [loading, setLoading] = useState(false)
+    const  [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true) 
 
-const { cat } = useParams()
- 
-useEffect(() => {
-  setLoading(true)
-  setTimeout(() => {
-    setLoading(false)
-  }, 2500);
-},[]);
-
-    useEffect(
-      () => {
+    const { cat } = useParams()
+    
+    useEffect(() => {
+       setIsLoading(true)
         if (cat === undefined) {
-        getItems().then((respuestaDatos) => setData(respuestaDatos));
-      }  else {
-        getItemsBycategory(cat).then((respuestaDatos) => setData(respuestaDatos));
+        getItems()
+        .then((respuestaDatos) => setData(respuestaDatos))
+        .finally( () => setIsLoading(false) ) 
+      } else {
+        getItemsByCategory(cat)
+        .then((respuestaDatos) => setData(respuestaDatos))
+        .finally( () => setIsLoading(false) )  
       }
     }, [cat]);
 
-  return (
-    <>
-     {loading ? <CircularProgress className="loading"/> :  
+
+  return (<>
+     {    
+        isLoading ? 
+        <div className="jsx loading" ><DotSpinner size={40} speed={0.9}  color=" #c66161" /></div>
+        :
      <div className="jsx">
         <h1>{greeting}</h1> 
-          <div className='container'>
-              <ItemList  data={data}/>
-          </div>
-     </div>}
-    </>
-  )
+        <div className='container-filtro'>
+            <Filtro/>
+            <div className='container'>
+                <ItemList  data={data}/>
+            </div>
+        </div>
+     </div>
+     }
+  </>)
 }
 
 export default ItemListContainer ;
