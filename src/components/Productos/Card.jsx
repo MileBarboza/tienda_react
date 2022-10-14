@@ -2,15 +2,15 @@ import './card.scss'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import { Link } from "react-router-dom";
                             
-export default function card(props) {
+export default function Card(props) {
 
-   let {price, title, img, id} = props
+   let {price, title, img, id} = props;
 
   return (
-    <section className='card'>
-          <Link to={`/productos/${id}-${title}`}><div>
-              <img src={img} className='card__img' alt={`${title}`}/>
-          </div></Link>
+    <section className='card' key={id}>
+         <Link to= {`/productos/${id}`}>
+          <div><img src={img} alt={title} className='card__img'/></div>
+        </Link> 
           <div >
             <div className='card__detail'>
               <div>

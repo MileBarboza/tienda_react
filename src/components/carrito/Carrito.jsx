@@ -17,7 +17,7 @@ import Paper from '@mui/material/Paper';
 function Carrito() {
 
 const context = useContext(CartContext)
-const {cart, emptyCart, deleteItem, getItemPrice} = context    
+const {cart, emptyCart, deleteItem,getItemPrice} = context    
 
   return (
     <div className='jsx App'>
@@ -26,7 +26,7 @@ const {cart, emptyCart, deleteItem, getItemPrice} = context
           (cart.length === 0) ?
           (<div>
               <GrCart className='carrito_vacio'/>
-              <p>El carrito está vacío.</p>
+              <p>El carrito está vacío</p>
                <Link to="/"><button className='btn'>ir a Tienda</button></Link>
            </div>)
           :
@@ -49,7 +49,7 @@ const {cart, emptyCart, deleteItem, getItemPrice} = context
                            key={item.id} 
                           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                           <TableCell align="center"><img src={item.img} className='carrito__img' alt="producto Clothing"/></TableCell>
-                          <TableCell align="center"><p >{item.title}</p><p >{item.color}</p></TableCell>
+                          <TableCell align="center"><p >{item.title}</p></TableCell>
                           <TableCell align="center"><p >${item.price}</p></TableCell>
                           <TableCell align="center"><p>{item.count}</p></TableCell>
                           <TableCell align="center"><p>${item.count * item.price}</p></TableCell>
