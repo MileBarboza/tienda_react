@@ -13,11 +13,12 @@ import { CartContext } from "../../context/CartContext"
 function ItemDetail({data}) {
 
   const [isInCart, setIsInCart] = useState(false)  
+  const [previewImg ,setPreviewImg ] = useState(data.img)
   const {addItem} = useContext(CartContext)
   
   function handleAddToCart(count){
       addItem(data,count)
-      toast(`Agregaste ${count} ${data.title} al Carrito! `,{autoClose: 2000,theme: "colored", hideProgressBar: true, style: {
+      toast(`Agregaste ${count} ${data.title} al Carrito! `,{autoClose: 1500,theme: "colored", hideProgressBar: true, style: {
         background: "linear-gradient(19deg, #a8fadf 0%, #bcafe7 100%)",
         borderRadius:"7px",
         fontWeight:"600",
@@ -30,9 +31,17 @@ function ItemDetail({data}) {
 
   return (
       <section className="itemD">  
-          <div className="itemD__img">
-            <img className="itemD__img-Product"  src={data.img} alt="producto Clothing" />
-          </div>         
+          <div className='itemD__img'>
+            <div className="product">
+                <div className="product-small-img">
+                    <img src={data.img1} alt="producto Clothing" onClick={() => setPreviewImg(data.img1)}/>
+                    <img src={data.img} alt="producto Clothing" onClick={() => setPreviewImg(data.img)}/>
+                </div>
+                <div className='img-container'>
+                    <img src={previewImg} alt="producto Clothing" />
+                </div>
+            </div>   
+          </div> 
 
           <div className="itemD__txt">
               <p className='itemD__categoria'>{data.category}</p>
@@ -66,7 +75,7 @@ function ItemDetail({data}) {
                   </div>
                 :
                 <div>
-                  <ItemCount  onAddToCart={handleAddToCart} initial={0} stock={data.stock}/> 
+                  <ItemCount  onAddToCart={handleAddToCart} initial={1} stock={data.stock}/> 
                   <button className="btn__fav"><IoMdHeartEmpty/></button>
                 </div>
               }

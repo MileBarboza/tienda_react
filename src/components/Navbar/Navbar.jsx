@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import CartWidget from './CartWidget';
 
 function Navbar() {
+
     return (
       <header className="navbar">
           <div  className='nav'>
@@ -18,6 +19,7 @@ function Navbar() {
                       <BsSearch className="icons__search"/>
                   </form>
                 </div> 
+                 
 
                 <Link to='/login'><button className="icons__user"> <BiUser /></button></Link>
                 <Link to='/favorito'><button className="icons__heart"> <IoMdHeartEmpty /> </button></Link>

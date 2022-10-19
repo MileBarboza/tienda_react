@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-// import {getSingleItems} from '../../database/mockAPI';
-import {getSingleItems} from '../../database/firestore';
+// import {getSingleItem} from '../../database/mockAPI';
+import {getSingleItem} from '../../database/firestore';
 import ItemDetail from "./ItemDetail"
 import { useParams } from "react-router-dom";
 import { DotSpinner } from '@uiball/loaders'
@@ -14,7 +14,7 @@ const [isLoading, setIsLoading] = useState(true)
 const {id} = useParams();
 
 useEffect(()=>{
-  getSingleItems(id)
+  getSingleItem(id)
   .then((respuestaDatos) => setData(respuestaDatos))
   .catch((errormsg) => {
      setError(errormsg.message);

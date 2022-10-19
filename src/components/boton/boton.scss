@@ -15,8 +15,9 @@
         background-color: transparent;
         border-radius: 5px;
         border: 1px rgb(255, 180, 180) solid; 
+        width: 25px;
+        height: 25px;
         margin: 5px;
-        padding: 5px;
         font-size: 10px;
     }
     &__fav{
@@ -75,8 +76,8 @@
         &-verde{
             background-color: rgb(153, 204, 81);
         }
-        &-celeste{
-            background-color: rgb(163, 227, 246);
+        &-azul{
+            background-color: rgb(134, 188, 204);
         }
     }
 } 

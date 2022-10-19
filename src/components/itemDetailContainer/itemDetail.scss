@@ -44,10 +44,10 @@
             display: flex;
             justify-content: right;
             padding-right: 90px;
-            &-Product {
-                width: 400px;
-                height: 500px;
-            }   
+            // &-Product {
+            //     width: 400px;
+            //     height: 500px;
+            // }   
         }
         &__detalle{
             display: flex;
@@ -56,3 +56,23 @@
         }
 }
 
+.product{
+    &-small-img{
+        float:left;
+        & img{
+            height: 100px;
+            margin: 8px 0 ;
+            cursor: pointer;
+            display: block;
+        }
+    }
+}
+.img-container{
+    float: right;
+    padding: 10px;
+        & img{
+            width: 400px;
+            height: 500px;
+        // height: 300px;
+        }
+}

@@ -15,7 +15,7 @@ function restar(){
   return (
     <div>
       <p>Stock: {stock - count}</p> 
-        <button onClick={restar} disabled={count <= 0} className='btn__Count'>-</button>
+        <button onClick={restar} disabled={count <= 1} className='btn__Count'>-</button>
         <span>{count}</span>
         <button onClick={agregar} disabled={ count >= stock } className='btn__Count'>+</button>
 

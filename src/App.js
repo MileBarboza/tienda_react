@@ -14,6 +14,7 @@ import PreguntasFrecuentes from './components/Footer/preguntas/PreguntasFrecuent
 import TérminosYCondiciones from './components/Footer/preguntas/TérminosYCondiciones';
 import PolíticasDePrivacidad from './components/Footer/preguntas/PolíticasDePrivacidad';
 import MyProvider from './context/CartContext';
+import CheckoutForm from './components/CheckoutForm/CheckoutForm';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                 </div>
               }/> 
               <Route path='/carrito' element={ <Carrito/> }/>
+              <Route path='/checkoutForm' element={ <CheckoutForm/> }/>
               <Route path='/login' element={ <Login/> }/>
               <Route path='/favorito' element={ <Favorito/> }/>
               <Route path='/preguntas-frecuentes' element={ <PreguntasFrecuentes/> }/>

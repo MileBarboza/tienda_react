@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { GrCart } from 'react-icons/gr'
 import { CartContext } from '../../context/CartContext';
 
-
 function CartWidget() {
 
 const { getItemCount } = useContext(CartContext)
