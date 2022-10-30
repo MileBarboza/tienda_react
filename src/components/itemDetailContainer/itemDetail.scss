@@ -1,13 +1,14 @@
 .itemD{
-    height: 100vh;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-        &__txt {
-            text-align: start;
-            flex: 1 2 50rem;
-        }
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: right;
+    margin-bottom: 60px;
+    &__img {
+        padding-left: 30px;
+    }
+    &__txt{
+        padding-left: 70px;
+    }
         &__titulo {
             font-size: 2.5rem;
             font-weight: 600;
@@ -39,24 +40,20 @@
                 }
             }
         }
-        &__img {
-            flex: 1 1 50rem;
-            display: flex;
-            justify-content: right;
-            padding-right: 90px;
-            // &-Product {
-            //     width: 400px;
-            //     height: 500px;
-            // }   
-        }
         &__detalle{
             display: flex;
             flex-direction: row;
             margin: 10px 0;
         }
+        &__carrito{
+            height: 130px;
+            margin: 20px 0 -30px;
+        }
 }
-
 .product{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     &-small-img{
         float:left;
         & img{
@@ -73,6 +70,70 @@
         & img{
             width: 400px;
             height: 500px;
-        // height: 300px;
         }
+}
+
+@media screen and (max-width: 1330px) {
+    .itemD__txt{
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 839px) {
+    .itemD__img {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .itemD{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: right;
+        margin-bottom: 30px;
+        &__txt{
+            padding-left: 70px;
+        }
+        &__img {
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .product{
+        display: flex;
+        flex-direction: column-reverse;
+        &-small-img{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+      
+        }
+    }
+    .img-container{
+        padding: 0 40px;
+        margin: auto;
+        & img{
+            width: 300px;
+           height: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .itemD{
+        display: grid;
+        grid-template-columns: minmax(320px 1fr);
+        &__txt{
+            padding-left: 40px;
+        }
+    }
+    .img-container{
+        margin: auto;
+        padding: 0;
+        & img{
+           width: 280px;
+           height: 380px;
+        }
+    }
 }

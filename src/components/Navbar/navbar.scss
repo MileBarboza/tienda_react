@@ -52,7 +52,7 @@
         position: relative;
         bottom: 1px;
         left: 4px;
-        
+        filter: drop-shadow(2px 1px #fff );
         }
   }
   .item__total {
@@ -123,7 +123,6 @@
   .sub-link:hover{
     background-color: rgb(240, 234, 227);
   }
-  /* _______________________     BUSCADOR     */
   .contenedor-buscador{
     position: absolute;
     right: 10.9375rem;
@@ -131,10 +130,10 @@
   .box{
     cursor: pointer;
   }
-  .box:hover input{ 
-    width: 120px; 
-    border-bottom: 1px solid rgb(216, 213, 213);
-  }
+  .box.active input{ 
+     width: 120px; 
+     border-bottom: 1px solid rgb(216, 213, 213);
+   }
   .box input {
     width: 0;
     outline: none;
@@ -145,10 +144,42 @@
     padding-left: 10px;
     font-size: 17px;
     }
+
   
-  @media (max-width: 600px) {
-    .logo {
-      width: 180px;
+  @media (max-width: 770px) {
+    .contenedor-buscador{
+      position: absolute;
+      left: 10px;
+    }
+  }
+  @media (max-width: 480px) {
+    .item__total {
+    right: -12px;
+
+    }
+    .box.active input{ 
+      width: 90px; 
+    }
+  }
+
+  @media (max-width: 440px) {
+    .icons{
+      margin-left: 30px;
+      gap: 6px;
+    }
+  }
+  @media (max-width: 362px) {
+    .icons{
+      margin: 0 5px 0 50px;
+      gap: 3px;
+    }
+    .box input {
+      padding-left: 0px;
+    }
+    .box.active input{ 
+      width: 70px; 
     }
   }
   
+
+

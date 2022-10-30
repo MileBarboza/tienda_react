@@ -1,7 +1,7 @@
 .card {
     margin: 10px 15px;
-    width: 250px;
-    width: 200px;
+    width: 230px;
+    height: 390px;
     border-radius: 8px;
     border: 1px solid rgb(214, 214, 214);
     overflow: hidden;
@@ -12,22 +12,22 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            margin-bottom: 5px;
-        }
-        &__detail{
-            display: flex;
-            justify-content: space-between;
+            margin-bottom: 7px;
         }
         &__titulo{
-            line-height: 19px;
+            line-height: 15px;
             text-align: start;
-            font-size: 14px;
+            font-size: 17px;
             padding-left: 10px;
             color: #333;
         }
+        &__prefa{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 0 20px;
+        }
         &__precio{
-            text-align: start;
-            padding-left: 25px;
             font-weight: bold;
             font-size: 1.2rem;
             line-height: 40px;
@@ -37,12 +37,46 @@
             background: none;
             border: none;
             font-size: 25px;
-            margin-right: 10px;
             color: rgb(81, 81, 81);
+            &:active {
+                transition: all 0.2s;
+                transform: scale(1.2);
+            }
+            &-lleno{
+                color: rgb(233, 27, 27);
+            }
         }
 }
 
+@media screen and (max-width: 520px) {
+    .card {
+        margin: 10px 5px;
+        width: 210px;
+        height: 375px;
+    }
+}
+@media screen and (max-width: 440px) {
+        .card {
+        margin: 10px 5px;
+        width: 180px;
+        height: 330px;
+    }
+}
 
-.offerTag{
-    color: #fd8758;
+@media screen and (max-width: 340px) {
+        .card {
+        margin: 10px 5px;
+        width: 150px;
+        height: 300px;
+        &__titulo{
+            line-height: 21px;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+        &__precio{
+            font-size: 1.1rem;
+            line-height: 40px;
+            color: #000;
+        }
+    }
 }

@@ -1,4 +1,22 @@
 .filtro{
-    margin-left: 10px;
-    padding: 25px;
+    line-height: 25px;
+    height: 590px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    padding: 5px 25px;
+    margin-bottom: 4rem;
+    &-sec{
+        margin: 20px 0 10px;
+    }
+    &__precio{
+        display: flex;
+        justify-content: center;
+    }
 }
+
+@media screen and (max-width: 740px) {
+    .filter{
+        position: relative;
+        left: -100px;
+    }
+}
+

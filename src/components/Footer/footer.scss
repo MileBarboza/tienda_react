@@ -2,7 +2,8 @@ footer {
     background: rgb(194, 191, 191);
     width: 100%;
     color: #000;
-    margin-top: 40px;
+    position: absolute;
+    bottom: 0vh;
   }
   .footer {
     text-align: center;
@@ -29,6 +30,15 @@ footer {
         padding: 5px;
         margin: 0;
       }
+      &__text{
+          text-align: start;
+          color: rgb(44, 44, 44);
+          line-height: 30px;
+      }
+      &__conte{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      }
   }
   h5{
     line-height: 40px;
@@ -48,5 +58,9 @@ footer {
       justify-items: center;
       align-items: center;
       gap: 40px;
+      &__conte{
+        display: grid;
+        grid-template-columns: 1fr;
+      }
     }
   }

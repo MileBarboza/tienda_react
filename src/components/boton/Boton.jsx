@@ -2,7 +2,7 @@ import './boton.scss'
 
 function Boton(props) {
   return (
-    <button onClick={props.onClick} className="btn">{props.text}</button>
+    <button onClick={props.onClick} className="btn btn__categoria">{props.text}</button>
   )
 }
 

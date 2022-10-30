@@ -1,0 +1,131 @@
+.banner{
+    width: 100%;
+}
+.categoria{
+    margin: 10px 15px;
+    margin: 10px 5%;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 60px;
+    position: relative;
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+    &__btn-r{
+        position: absolute;
+        top: 40%;
+        right: 30%
+    }
+    &__btn-l{
+        position: absolute;
+        top: 40%;
+        left: 30%
+    }
+}
+.aviso{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 60px;
+    gap: 80px;
+    &__conte{
+        width: 300px;
+    }
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    .swiper-pagination-bullet {
+        background-color: black;
+        height: 10px;
+        width: 10px;
+        margin-right: 6px;
+        opacity: 0.5;
+        cursor: pointer;
+        border-radius: 100%;
+    }
+    .swiper-pagination-bullet-active {
+        background-color:  rgb(222, 134, 134);
+        opacity: 1;        
+    }
+}
+.sect{
+        margin-bottom:5rem;
+}
+.loNvo{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 80px;
+}
+
+@media screen and (max-width:1020px) {
+    .loNvo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+    margin-bottom:10%;
+    }
+}
+
+@media screen and (max-width:920px) {
+.categoria{
+    &__btn-r{
+        position: absolute;
+        top: 35%;
+        right: 27%
+    }
+    &__btn-l{
+        position: absolute;
+        top: 35%;
+        left: 27%
+    }
+  }
+}
+@media screen and (max-width: 768px) {   
+    .sect{
+        margin-bottom: 15rem;
+    }
+}
+
+@media screen and (max-width: 740px) {    
+    .categoria{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        &__btn-r{
+            position: absolute;
+            top: 70%;
+            right: 65%
+        }
+        &__btn-l{
+            position: absolute;
+            top: 20%;
+            left: 65%
+        }
+   }
+}
+@media screen and (max-width: 540px) {  
+    .sect{
+        margin-bottom: 30rem;
+    }
+}
+@media screen and (max-width: 420px) {    
+    .categoria{
+        &__btn-r{
+            position: absolute;
+            top: 70%;
+            right: 58%;
+        }
+        &__btn-l{
+            position: absolute;
+            top: 15%;
+            left: 58%
+        }
+   }
+}

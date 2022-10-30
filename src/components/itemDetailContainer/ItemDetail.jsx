@@ -4,17 +4,22 @@ import { BsBoxSeam } from 'react-icons/bs'
 import { MdOutlineLocalShipping } from 'react-icons/md'
 import { IoWalletOutline } from 'react-icons/io5'
 import { IoMdHeartEmpty } from 'react-icons/io'
+import { IoMdHeart } from 'react-icons/io'
 import './itemDetail.scss'
 import { Link } from "react-router-dom";
 import Boton from "../boton/Boton"
 import { toast } from "react-toastify";
 import { CartContext } from "../../context/CartContext"
+import { FavContext } from '../../context/FavContext';
 
 function ItemDetail({data}) {
 
   const [isInCart, setIsInCart] = useState(false)  
   const [previewImg ,setPreviewImg ] = useState(data.img)
+  const [toggleFav, setToggleFav] = useState(false)
   const {addItem} = useContext(CartContext)
+  const { addFav } = useContext(FavContext);
+
   
   function handleAddToCart(count){
       addItem(data,count)
@@ -29,8 +34,12 @@ function ItemDetail({data}) {
   setIsInCart(true) 
 }
 
+function onAddFav() {
+  addFav(data);
+}
+
   return (
-      <section className="itemD">  
+      <section className="itemD ">  
           <div className='itemD__img'>
             <div className="product">
                 <div className="product-small-img">
@@ -69,14 +78,14 @@ function ItemDetail({data}) {
 
               {    
                 ( isInCart ) ? 
-                  <div className=''>
-                      <Link to='/'><Boton text='Seguir Comprando'></Boton></Link>
+                  <div className='itemD__carrito'>
+                      <Link to='/productos'><Boton style={{marginLeft:'14'}} text='Seguir Comprando'></Boton></Link>
                       <Link to='/carrito'><Boton text='Ver Carrito'></Boton></Link>
                   </div>
                 :
-                <div>
+                <div className='itemD__carrito2'>
                   <ItemCount  onAddToCart={handleAddToCart} initial={1} stock={data.stock}/> 
-                  <button className="btn__fav"><IoMdHeartEmpty/></button>
+                  <button onClick={() => setToggleFav(!toggleFav)} className="btn__fav">{toggleFav ? (<IoMdHeart  className='card__favorito-lleno'/>) : (<IoMdHeartEmpty onClick={onAddFav}/>)}</button>
                 </div>
               }
 

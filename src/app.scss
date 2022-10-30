@@ -5,6 +5,11 @@
   list-style: none;
   text-decoration: none;
 }
+body{
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 13rem;
+}
 .App {
   text-align: center;
 }
@@ -23,4 +28,14 @@
 
 .loading{
   margin: 30vh 48vw;
+}
+@media (max-width: 768px) {
+  .jsx{
+    margin-bottom: 260px;
+  }
+}
+@media (max-width: 568px) {
+  .jsx{
+    margin-bottom: 510px;
+  }
 }

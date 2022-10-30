@@ -4,7 +4,7 @@ import './itemList.scss'
 
 function ItemList(props) {
   return (
-    <div className='contenedorCard'>
+    <div className='contenedorCard' >
          {props.data.map((item) => {
               return (
                 <Card 

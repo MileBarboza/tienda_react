@@ -1,10 +1,17 @@
 .contacto{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    &__Login{
+        display: flex;
+        justify-content:center;
+        justify-content:space-evenly;
+        width:500px;
+        margin: 50px auto 0;
+    }
     &__formulario{
-        width: 40%;
-        margin: 80px;
+        width:500px;
+        margin: 20px 0 80px;
         input,  textarea{
             width: 100%;
             padding: .7em;
@@ -25,11 +32,17 @@
     }
 }
 
+.btnLogin{
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 750px) {    
     .contacto{
-        &__formulario{
-            width: 80%;
-            margin: 15%;
+        &__Login{
+            width: 100%;           
         }
     }
 }

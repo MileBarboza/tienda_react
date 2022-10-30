@@ -4,7 +4,7 @@
     border-radius: 7px;
     padding: 7px 10px;
     font-size: 1em;
-    margin: 1.5rem 0;
+    margin: 1.5rem 10px 0 0;
     border: none;
     cursor: pointer;
          &:active {
@@ -25,9 +25,9 @@
         background: none;
         font-size: 30px;
         position: relative;
-        top: -55px;
+        top: -32px;
         left: 150px;
-        margin-left: 8px;
+        margin-left: 15px;
         cursor: pointer;
         &:active {
             transition: all 0.2s;
@@ -46,20 +46,34 @@
         margin: 5px;
         cursor: pointer;
         width:45px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         &:active {
             transition: all 0.2s;
             background-color: rgb(218, 216, 207);
+        }
+        &-filtro{
+            border-radius: 7px;
+            border: 1px solid rgb(151, 151, 151);
+            cursor: pointer;
+            width:40px;
+            height: 30px;
+            margin: 5px;
+            &:active ,:hover{
+                transition: all 0.2s;
+                background-color: rgb(218, 216, 207);
+            }
         }
     }
     &__color {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        border: 2px solid rgb(221, 221, 221);
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         margin: 5px;
         cursor: pointer;
         &:active {
-            border: 1px solid #000;
+            border: 1px solid rgb(65, 65, 65);
         }
         &-rosa{
             background-color: rgb(255, 170, 159);
@@ -81,3 +95,17 @@
         }
     }
 } 
+.btn__color .active{
+    border: 1px solid #000;
+}
+@media screen and (max-width: 819px) {
+    .btn__talle {
+        width: 35px;
+        width: 20%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .btn__talle {
+        width: 45px;
+    }
+}
