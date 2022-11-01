@@ -23,7 +23,7 @@ function Banner({greeting,data }) {
                 slidesPerView={1}
                 modules={[Pagination, Autoplay]}
                 autoplay={{
-                    delay: 3500,
+                    delay: 4500,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -34,15 +34,14 @@ function Banner({greeting,data }) {
             >
                 <SwiperSlide className="slider">
                     <img src="/assets/banner2.png" alt="Clothing"className='banner'/>
+                </SwiperSlide>   
+                <SwiperSlide className="slider">
+                    <img src="/assets/banner1.png" alt="Clothing"className='banner'/>
                 </SwiperSlide>
-                
                 <SwiperSlide className="slider">
                     <img src="/assets/banner3.png" alt="Clothing"className='banner'/>
                 </SwiperSlide>
 
-                <SwiperSlide className="slider">
-                    <img src="/assets/banner1.png" alt="Clothing"className='banner'/>
-                </SwiperSlide>
             </Swiper>
             <div className="pagination"/>
         </div>
