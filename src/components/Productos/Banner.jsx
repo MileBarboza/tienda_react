@@ -33,10 +33,10 @@ function Banner({greeting,data }) {
                 className="slider"
             >
                 <SwiperSlide className="slider">
-                    <img src="/assets/banner2.png" alt="Clothing"className='banner'/>
+                    <img src="/assets/banner1.png" alt="Clothing"className='banner'/>
                 </SwiperSlide>   
                 <SwiperSlide className="slider">
-                    <img src="/assets/banner1.png" alt="Clothing"className='banner'/>
+                    <img src="/assets/banner2.png" alt="Clothing"className='banner'/>
                 </SwiperSlide>
                 <SwiperSlide className="slider">
                     <img src="/assets/banner3.png" alt="Clothing"className='banner'/>
